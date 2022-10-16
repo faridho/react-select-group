@@ -35,9 +35,9 @@ class Example extends Component {
 | ----------- | :------: | ---------------------------------------------------------------------------------------------------------------------- |
 | placeholder |  string  | Placeholder input type on text box                                                                                     |
 | isError     | boolean  | Handle custom error. Default is false                                                                                  |
-| flags       |  array   | Element must image url. Beacuse of show flags on group one column                                                      |
-| labels      |  array   | This is optional. But, if you want describe each flag you can use it and length of labels array should same with flags |
-| onChange    | function | Emit every value to parents. Should print paramater to get result                                                      |
+| flags       |  array   | Element must image url. Because of show flags on group one or left column column                                                      |
+| labels      |  array   | This is optional. But, if you want describe each flag you can use it. And length of labels array should same with length of flags |
+| onChange    | function | Emit every value to parent. Should print paramater to get result                                                      |
 
 ## License
 
