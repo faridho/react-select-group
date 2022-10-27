@@ -17,27 +17,48 @@ npm install react-select-group
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-
+import React from 'react'
 import { ReactSelectGroup } from 'react-select-group'
 import 'react-select-group/dist/index.css'
 
-class Example extends Component {
+const App = () => {
+  const flags = [
+    'https://res.cloudinary.com/duzt2dvg6/image/upload/v1665326782/flags/gmail.png',
+    'https://res.cloudinary.com/duzt2dvg6/image/upload/v1665326789/flags/outlook.png',
+    'https://res.cloudinary.com/duzt2dvg6/image/upload/v1665326776/flags/apple.png',
+    'https://res.cloudinary.com/duzt2dvg6/image/upload/v1665326799/flags/yahoo.png'
+  ]
+  const labels = [
+    'Gmail', 'Outlook', 'Apple Mail', 'Yahoo Mail'
+  ]
   render() {
-    return <ReactSelectGroup />
+    const onChangeValue = (data) => {
+      // your logic
+    }
+    return (
+      <ReactSelectGroup 
+        placeholder='Type email here'
+        isError={error}
+        flags={flags}
+        labels={labels}
+        onChange={onChangeValue} 
+      />
+    )
   }
 }
+
+export default App
 ```
 
 ## Props
 
-| Props       |   Type   | Desription                                                                                                             |
-| ----------- | :------: | ---------------------------------------------------------------------------------------------------------------------- |
-| placeholder |  string  | Placeholder input type on text box                                                                                     |
-| isError     | boolean  | Handle custom error. Default is false                                                                                  |
-| flags       |  array   | Element must image url. Because of show flags on group one or left column column                                                      |
-| labels      |  array   | This is optional. But, if you want describe each flag you can use it. And length of labels array should same with length of flags |
-| onChange    | function | Emit every value to parent. Should print paramater to get result                                                      |
+| Props         |    Type    | Desription                                                                                                                        |
+| ------------- | :--------: | --------------------------------------------------------------------------------------------------------------------------------- |
+| `placeholder` |  `string`  | Placeholder input type on text box                                                                                                |
+| `isError`     | `boolean`  | Handle custom error. Default is false                                                                                             |
+| `flags`       |  `array`   | Element must image url. Because of show flags on group one or left column                                                         |
+| `labels`      |  `array`   | This is optional. But, if you want describe each flag you can use it. And length of labels array should same with length of flags |
+| `onChange`    | `function` | Emit every value to parent. Should print paramater to get result                                                                  |
 
 ## License
 
