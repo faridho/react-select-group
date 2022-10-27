@@ -1,6 +1,6 @@
 # React Select Group
 
-> select column with double options for react js form
+select column with double options for react js form
 
 [![NPM](https://img.shields.io/npm/v/react-select-group.svg)](https://www.npmjs.com/package/react-select-group) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
